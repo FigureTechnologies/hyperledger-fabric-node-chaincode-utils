@@ -72,7 +72,7 @@ const iteratorToList = async function iteratorToList(iterator) {
         res = await iterator.next();
         if (res.value && res.value.value.toString()) {
             const jsonRes = {};
-            logger.debug(res.value.value.toString('utf8'));
+            //logger.debug(res.value.value.toString('utf8'));
 
             jsonRes.key = res.value.key;
             try {
@@ -92,7 +92,7 @@ const iteratorToList = async function iteratorToList(iterator) {
 
     logger.debug('end of data');
     await iterator.close();
-    logger.info(JSON.stringify(allResults));
+    //logger.info(JSON.stringify(allResults));
 
     return allResults;
 };

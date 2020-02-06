@@ -188,7 +188,7 @@ const TransactionHelper = class {
         validateQuery(query);
 
         const queryString = JSON.stringify(query);
-        this.logger.debug(`Query: ${queryString}`);
+        //this.logger.debug(`Query: ${queryString}`);
         const iterator = await this.stub.getQueryResult(queryString);
 
         return dbUtils.iteratorToList(iterator);
